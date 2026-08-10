@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="58" fill="#1a1a2e" stroke="#333" stroke-width="2"/>
+  <text x="60" y="55" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="32" fill="#ffffff" dominant-baseline="central">HFM</text>
+  <text x="60" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="10" fill="#888888" letter-spacing="2">HF MARKETS</text>
+</svg>
