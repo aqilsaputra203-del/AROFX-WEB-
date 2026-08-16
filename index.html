@@ -1,348 +1,264 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GenjotCandlestick Trading Academy — Dashboard</title>
-  <meta name="description" content="GenjotCandlestick Trading Academy — Belajar trading XAU/USD (Emas) dari nol secara terarah, bertahap, dan gratis.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AroFX Academy — Institutional DeFi &amp; Forex Trading Ecosystem</title>
+  <meta name="description" content="AroFX Academy adalah ekosistem trading kelas institusi. Signal berakurasi tinggi dari Signal Provider Resmi (@arofxchannel) dan ruang komunitas terbuka di Public Space (@arofxacademy)." />
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
 
-<div class="app-container">
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-logo">
-      <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2z"/></svg>
-    </div>
-    
-    <nav class="sidebar-nav">
-      <div class="nav-icon active" data-nav="overview" title="Dashboard">
-        <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
-      </div>
-      <div class="nav-icon" data-nav="activity" title="Activity">
-        <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/></svg>
-      </div>
-      <div class="nav-icon" data-nav="glossary" title="Glossary">
-        <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
-      </div>
-      <div class="nav-icon" data-nav="bookmarks" title="Bookmarks">
-        <svg viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
-      </div>
-      <div class="nav-icon" data-nav="chat" title="Chat & Support">
-        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
-      </div>
-      <div class="nav-icon" data-nav="tasks" title="Tasks">
-        <svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
-      </div>
+  <!-- NAVBAR -->
+  <header class="top-nav">
+    <a href="#top" class="nav-brand">
+      <img src="assets/logo.png" alt="AroFX Logo" />
+      <span>AROFX ACADEMY</span>
+    </a>
+    <button class="mobile-nav-toggle" id="navToggle" aria-label="Toggle Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="https://t.me/arofxacademy" target="_blank">Public Channel</a>
+      <a href="https://t.me/arofxchannel" target="_blank">Signal Provider</a>
+      <a href="https://api.whatsapp.com/send/?phone=6281252805815&text&type=phone_number&app_absent=0" target="_blank">Admin Contact</a>
+      <a href="#ecosystem">Ekosistem</a>
     </nav>
+    <a href="#infrastructure" class="btn-pill desktop-only">
+      Broker Partner <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </header>
 
-    <div class="sidebar-bottom">
-      <div class="nav-icon" title="More" id="more-btn">
-        <svg viewBox="0 0 24 24"><path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Forex Trading Education</span>
+      
+      <!-- MOBILE ONLY IMAGE -->
+      <div class="hero-image-mobile">
+        <img src="assets/hero_mockup.png" alt="AroFX Trading" class="hero-image" />
+      </div>
+
+      <h1 class="hero-heading">AROFX ACADEMY, THAT IS OUR <span class="hero-word-rotator" id="heroRotator" style="display: inline-block;">EDGE.</span></h1>
+      <p class="hero-subtitle">
+        Trading education firm dedicated to helping you navigate trading markets. Join our community for insights and tutorials
+      </p>
+      <div class="hero-actions">
+        <a href="https://t.me/arofxacademy" target="_blank" class="btn-pill">Join Community <i class="fa-brands fa-telegram"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=6281252805815&text&type=phone_number&app_absent=0" target="_blank" class="btn-green">Join Elite Club <i class="fa-solid fa-bolt"></i></a>
       </div>
     </div>
-  </aside>
-
-  <!-- MAIN AREA -->
-  <main class="main-content">
     
-    <!-- HEADER -->
-    <header class="header">
-      <div class="header-left">
-        <div class="header-title">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="#fff"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
-          Genjot Candlestick
+    <div class="hero-image-wrapper">
+      <img src="assets/hero_mockup.png" alt="AroFX Trading" class="hero-image" />
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="stats-container">
+      <div class="stat-item stat-green">
+        <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+        <div class="stat-val count-up-val" data-target="15000" data-suffix="+" data-decimals="0">0</div>
+        <div class="stat-label">Member Publik Space</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fa-solid fa-crown"></i></div>
+        <div class="stat-val count-up-val" data-target="2500" data-suffix="+" data-decimals="0">0</div>
+        <div class="stat-label">Member VIP Aktif</div>
+      </div>
+      <div class="stat-item stat-green">
+        <div class="stat-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <div class="stat-val count-up-val" data-target="88.89" data-suffix="%" data-decimals="2">0</div>
+        <div class="stat-label">Signal Hit Rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fa-solid fa-terminal"></i></div>
+        <div class="stat-val count-up-val" data-target="24" data-suffix="/7" data-decimals="0">0</div>
+        <div class="stat-label">Quantitative Terminal</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECOSYSTEM (PORTFOLIO) -->
+  <section class="ecosystem-section" id="ecosystem">
+    <div class="section-header">
+      <h2 class="section-title">Our Trading Ecosystem</h2>
+      <a href="https://t.me/arofxacademy" target="_blank" class="section-link">Explore All Features <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    
+    <div class="eco-grid">
+      <a href="https://api.whatsapp.com/send/?phone=6281252805815&text&type=phone_number&app_absent=0" target="_blank" class="eco-card">
+        <div class="eco-img-box"><img src="assets/feature_offline_event.jpg" alt="Offline Event" /></div>
+        <span class="eco-tag">100% Gratis • Meetup & Workshop</span>
+        <h3 class="eco-title">Invitation Offline Event</h3>
+        <p class="eco-desc">Kesempatan eksklusif untuk menghadiri event offline & workshop secara gratis bersama para founder dan member aktif AroFX Academy.</p>
+        <div class="eco-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      
+      <a href="https://t.me/arofxacademy" target="_blank" class="eco-card">
+        <div class="eco-img-box"><img src="assets/feature_diskusi_member.jpg" alt="Diskusi Member" /></div>
+        <span class="eco-tag">15.000+ Traders • Diskusi Member</span>
+        <h3 class="eco-title">Diskusi Member & Networking</h3>
+        <p class="eco-desc">Fasilitas diskusi & networking dengan sesama anggota serta kesempatan tanya-jawab langsung dengan para founder di ruang publik.</p>
+        <div class="eco-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+
+      <a href="https://t.me/arofxchannel" target="_blank" class="eco-card">
+        <div class="eco-img-box"><img src="assets/feature_day_trading.jpg" alt="Day Trading" /></div>
+        <span class="eco-tag">88.89% Win Rate • Day Trading</span>
+        <h3 class="eco-title">Day Trading & Scalping</h3>
+        <p class="eco-desc">Signal trading harian atau scalping di market crypto futures & forex langsung dari Official Signal Provider.</p>
+        <div class="eco-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+      
+      <a href="https://t.me/arofxchannel" target="_blank" class="eco-card">
+        <div class="eco-img-box"><img src="assets/feature_market_terminal.jpg" alt="Market Terminal" /></div>
+        <span class="eco-tag">Live Actual Feed • Market Terminal</span>
+        <h3 class="eco-title">Market Terminal & On-Chain</h3>
+        <p class="eco-desc">Dapatkan riset data on-chain, market update, dan quantitative eksklusif yang kita olah dari berbagai sumber data aktual.</p>
+        <div class="eco-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+
+      <a href="https://t.me/arofxchannel" target="_blank" class="eco-card">
+        <div class="eco-img-box"><img src="assets/feature_trading_calls.jpg" alt="Trading Calls" /></div>
+        <span class="eco-tag">Spot Crypto & Gold • Trading Calls</span>
+        <h3 class="eco-title">Crypto Spot & Forex Calls</h3>
+        <p class="eco-desc">Signal crypto yang teruji untuk spot market, serta signal forex & gold khusus untuk swing trade.</p>
+        <div class="eco-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- YOUTUBE BANNER -->
+  <section class="youtube-section">
+    <div class="youtube-banner">
+      <div class="youtube-content">
+        <i class="fa-brands fa-youtube youtube-icon"></i>
+        <div class="youtube-text">
+          <h3 style="margin-bottom: 0;">Tutorial Pemula</h3>
         </div>
-        <div class="header-tabs">
-          <div class="header-tab active" data-tab="overview">Overview</div>
-          <div class="header-tab" data-tab="courses-hub">Courses Hub</div>
-          <div class="header-tab" data-tab="assessments">Assessments</div>
-          <div class="header-tab" data-tab="calendar">Calendar</div>
-          <div class="header-tab" data-tab="certificates">Certificates</div>
+      </div>
+      <a href="https://youtube.com/@arofxacademy" target="_blank" class="btn-red">Subscribe Sekarang <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- TIKTOK BANNER -->
+  <section class="youtube-section">
+    <div class="youtube-banner" style="background: rgba(255, 0, 80, 0.05); border-color: rgba(255, 0, 80, 0.2);">
+      <div class="youtube-content">
+        <i class="fa-brands fa-tiktok" style="font-size: 3rem; color: #ff0050;"></i>
+        <div class="youtube-text">
+          <h3 style="margin-bottom: 0;">Live Trading Setiap hari</h3>
         </div>
+      </div>
+      <a href="https://www.tiktok.com/@meiselarofix" target="_blank" class="btn-red" style="background: #ff0050;">Follow TikTok <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+
+
+  <!-- INFRASTRUCTURE (BROKERS) -->
+  <section class="infra-section" id="infrastructure">
+    <div class="section-header">
+      <h2 class="section-title">Official Broker Partners</h2>
+      <a href="https://api.whatsapp.com/send/?phone=6281252805815&text&type=phone_number&app_absent=0" target="_blank" class="section-link">Claim VIP Access <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="infra-grid">
+      <div class="infra-card">
+        <div class="infra-icon"><img src="assets/partner_1.svg" alt="Broker 1" /></div>
+        <div class="infra-info" style="width: 100%;">
+          <h3>HFM <span style="font-weight: 400; color: #d1d5db; font-size: 0.9em;">| Broker Teregulasi Global dengan Pengalaman Lebih dari 10 Tahun.</span></h3>
+          <ul class="infra-features">
+            <li><i class="fa-solid fa-check" style="color: #00e74e;"></i> Spread Mulai 0.0 Pips</li>
+
+            <li><i class="fa-solid fa-check" style="color: #00e74e;"></i> Leverage Fleksibel hingga 1:2000</li>
+            <li><i class="fa-solid fa-check" style="color: #00e74e;"></i> 1000+ Instrumen Perdagangan (Forex, Saham, Crypto, dll)</li>
+            <li><i class="fa-solid fa-check" style="color: #00e74e;"></i> Layanan CS Bahasa Indonesia 24/5</li>
+            <li><i class="fa-solid fa-check" style="color: #00e74e;"></i> Minimum Deposit Rendah (Mulai dari $5)</li>
+          </ul>
+          <div style="margin-top: 24px; display: flex; justify-content: flex-start;">
+            <a href="https://register.hftidtrade.com/int/en/new-live-account?refid=30425752" target="_blank" class="btn-green" style="padding: 6px 12px; font-size: 0.7rem;">Daftar Sekarang <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="infra-card">
+        <div class="infra-icon"><img src="assets/partner_2.png" alt="Broker 2" /></div>
+        <div class="infra-info" style="width: 100%;">
+          <h3>VT Markets <span style="font-weight: 400; color: #d1d5db; font-size: 0.9em;">| Broker Teregulasi Global dengan Pengalaman Lebih dari 10 Tahun.</span></h3>
+          <ul class="infra-features">
+            <li><i class="fa-solid fa-check" style="color: #00e74e;"></i> Spread Mulai 0.0 Pips</li>
+
+            <li><i class="fa-solid fa-check" style="color: #00e74e;"></i> Leverage Fleksibel hingga 1:1000</li>
+            <li><i class="fa-solid fa-check" style="color: #00e74e;"></i> 1000+ Instrumen Perdagangan (Forex, Saham, Crypto, dll)</li>
+            <li><i class="fa-solid fa-check" style="color: #00e74e;"></i> Layanan CS Bahasa Indonesia 24/5</li>
+            <li><i class="fa-solid fa-check" style="color: #00e74e;"></i> Minimum Deposit Rendah (Mulai dari $50)</li>
+          </ul>
+          <div style="margin-top: 24px; display: flex; justify-content: flex-start;">
+            <a href="https://www.idvtmarkets.com/trade-now/?affid=Mjg5MDA3NDk=" target="_blank" class="btn-green" style="padding: 6px 12px; font-size: 0.7rem;">Daftar Sekarang <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS / FAQ -->
+  <section class="faq-section">
+    <div class="section-header">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    
+    <div class="process-grid">
+      <div class="process-step">
+        <span class="process-num">01 / VIP ACCESS</span>
+        <h3 class="process-title">Cara join VIP?</h3>
+        <p class="process-desc">Sangat mudah! Daftar akun di salah satu broker partner resmi, lalu kirimkan bukti pendaftaran kepada Admin Support AroFX melalui kontak yang tersedia.</p>
       </div>
       
-      <div class="header-right">
-        <div class="header-icon" id="btn-favorites" title="Favorites">
-          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        </div>
-        <div class="header-icon" id="btn-bookmarks-header" title="Bookmarks">
-          <svg viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
-          <span class="badge" id="bookmark-count">0</span>
-        </div>
-        <div class="header-icon" id="btn-notifications" title="Notifications">
-          <svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
-        </div>
-        <button class="share-btn" id="btn-share">
-          <svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"/></svg>
-          Share
-        </button>
-        <div class="user-avatar" id="user-avatar" style="width: 32px; height: 32px; font-size: 14px;">U</div>
+      <div class="process-step">
+        <span class="process-num">02 / CHANNELS</span>
+        <h3 class="process-title">Public vs VIP Signal?</h3>
+        <p class="process-desc">@arofxacademy adalah ruang komunitas publik. Sedangkan @arofxchannel adalah saluran resmi khusus yang mendistribusikan signal trading berakurasi tinggi.</p>
       </div>
-    </header>
 
-    <!-- NOTIFICATION PANEL -->
-    <div class="notification-panel" id="notification-panel" style="display:none;">
-      <div class="notif-header">
-        <h3>Notifications</h3>
-        <button class="notif-close" id="notif-close">✕</button>
-      </div>
-      <div class="notif-list" id="notif-list">
-        <div class="notif-item unread">
-          <div class="notif-dot"></div>
-          <div><strong>Selamat datang!</strong><br><span>Mulai perjalanan belajar trading Anda dari Fase 1.</span></div>
-        </div>
-        <div class="notif-item unread">
-          <div class="notif-dot"></div>
-          <div><strong>Materi Baru Tersedia</strong><br><span>Fase 3: Price Action & Pattern sudah bisa diakses.</span></div>
-        </div>
-        <div class="notif-item">
-          <div class="notif-dot" style="background:transparent"></div>
-          <div><strong>Tips Harian</strong><br><span>Jangan lupa cek kalender ekonomi sebelum trading!</span></div>
-        </div>
+      <div class="process-step">
+        <span class="process-num">03 / CONTACT</span>
+        <h3 class="process-title">Admin Resmi AroFX?</h3>
+        <p class="process-desc">Seluruh komunikasi resmi dan verifikasi VIP hanya dilakukan melalui kontak resmi yang tercantum di web ini. Pastikan Anda hanya menghubungi admin resmi.</p>
       </div>
     </div>
+  </section>
 
-    <!-- SEARCH OVERLAY -->
-    <div class="search-overlay" id="search-overlay" style="display:none;">
-      <div class="search-box">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="#909098"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-        <input type="text" id="search-input" placeholder="Cari materi, istilah, atau topik..." autofocus>
-        <button id="search-close">✕</button>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-cta">
+        <h2>Let's build your <span style="color: #00e74e;">trading</span> edge</h2>
+        <a href="https://api.whatsapp.com/send/?phone=6281252805815&text&type=phone_number&app_absent=0" target="_blank" class="btn-green">Gabung Sekarang <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <div class="search-results" id="search-results"></div>
-    </div>
-
-    <!-- TOAST NOTIFICATION -->
-    <div class="toast" id="toast" style="display:none;"></div>
-
-    <!-- VIEWS CONTAINER -->
-    <div class="views-container">
       
-      <!-- OVERVIEW VIEW -->
-      <div id="overview-view" class="view-section active-view">
-        <div class="dashboard-grid">
-          
-          <!-- COURSES WIDGET -->
-          <div class="card courses-widget">
-            <div class="card-header">
-              <h2 class="card-title">Courses</h2>
-              <div class="courses-controls">
-                <div class="toggle-group">
-                  <button class="toggle-btn active" data-filter="explore">Explore</button>
-                  <button class="toggle-btn" data-filter="my-courses">My Courses</button>
-                </div>
-                <div class="icon-btn-group">
-                  <button class="icon-btn" id="btn-search" title="Search"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></button>
-                  <button class="icon-btn" id="btn-filter" title="Filter"><svg viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg></button>
-                </div>
-              </div>
-            </div>
-            <div class="courses-carousel-container" style="position: relative; display: flex; align-items: center;">
-              <button class="carousel-btn" id="course-scroll-left" style="position: absolute; left: 4px; z-index: 10; background: var(--bg-main); border: 1px solid var(--border-color); color: white; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.5); transition: transform 0.2s;"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg></button>
-              
-              <div class="courses-list" id="courses-list" style="overflow-x: auto; scroll-behavior: smooth; padding: 8px 16px; margin: 0 -16px; scrollbar-width: none;">
-                <div class="course-item" data-course="smc">
-                  <div class="course-image-container"><img src="smc_concept_diagram.png" alt="SMC"></div>
-                  <div class="course-tag">Trading</div>
-                  <div class="course-name">Smart Money Concepts Mastery</div>
-                  <div class="course-footer">
-                    <div class="course-techs"><span class="tech-badge">SMC</span><span class="tech-badge">XAU/USD</span></div>
-                    <div class="course-rating"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 5.0</div>
-                  </div>
-                </div>
-                <div class="course-item" data-course="snr">
-                  <div class="course-image-container"><img src="snr_concept_diagram.png" alt="SNR"></div>
-                  <div class="course-tag">Technical</div>
-                  <div class="course-name">Support & Resistance for Beginners</div>
-                  <div class="course-footer">
-                    <div class="course-techs"><span class="tech-badge">Price Action</span><span class="tech-badge">Forex</span></div>
-                    <div class="course-rating"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.8</div>
-                  </div>
-                </div>
-                <div class="course-item" data-course="snd">
-                  <div class="course-image-container"><img src="snd_concept_diagram.png" alt="SND"></div>
-                  <div class="course-tag">Strategy</div>
-                  <div class="course-name">Supply & Demand Trading 2.0</div>
-                  <div class="course-footer">
-                    <div class="course-techs"><span class="tech-badge">SND</span><span class="tech-badge">Strategy</span></div>
-                    <div class="course-rating"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 4.9</div>
-                  </div>
-                </div>
-              </div>
-
-              <button class="carousel-btn" id="course-scroll-right" style="position: absolute; right: 4px; z-index: 10; background: var(--bg-main); border: 1px solid var(--border-color); color: white; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.5); transition: transform 0.2s;"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></button>
-            </div>
-          </div>
-
-          <!-- CALENDAR WIDGET -->
-          <div class="card calendar-widget">
-            <div class="card-header">
-              <h2 class="card-title" id="cal-month-title" style="font-size:16px;">Jadwal Konten & Kelas</h2>
-              <div class="calendar-header-actions">
-                <button class="icon-btn" id="cal-prev"><svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button>
-                <button class="icon-btn" id="cal-next"><svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></button>
-              </div>
-            </div>
-            <div class="calendar-days">
-              <div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
-            </div>
-            <div class="calendar-grid" id="cal-grid"></div>
-            <div class="calendar-legend">
-              <div class="legend-item"><div class="legend-dot" style="background:#e11d48"></div> YouTube</div>
-              <div class="legend-item"><div class="legend-dot" style="background:var(--accent-yellow)"></div> TikTok Live</div>
-              <div class="legend-item"><div class="legend-dot" style="background:var(--accent-cyan)"></div> Zoom Class</div>
-            </div>
-          </div>
-
-          <!-- LEARNING PROGRESS WIDGET -->
-          <div class="card learning-progress-widget">
-            <div class="card-header"><h2 class="card-title">Learning Progress</h2></div>
-            <div class="progress-details">
-              <div class="current-phase-box">
-                <span class="phase-lbl">Sedang Dipelajari</span>
-                <span class="phase-val" id="current-phase-name">Fase 1: Fondasi Dasar</span>
-              </div>
-              <div class="learning-stats-row">
-                <div class="l-stat-box">
-                  <span class="l-stat-val" style="color: var(--accent-cyan)" id="stat-completed">0</span>
-                  <span class="l-stat-lbl">Materi Selesai</span>
-                </div>
-                <div class="l-stat-box">
-                  <span class="l-stat-val" style="color: var(--accent-pink)" id="stat-quizzes">0</span>
-                  <span class="l-stat-lbl">Kuis Lulus</span>
-                </div>
-              </div>
-              <button class="btn-continue-learning" id="btn-continue">
-                Lanjutkan Belajar
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </div>
-          </div>
-
-          <!-- MARKET SESSIONS WIDGET -->
-          <div class="card time-spent-widget" id="market-sessions-widget">
-            <div class="card-header" style="margin-bottom:16px;">
-              <h2 class="card-title">Sesi Market Global</h2>
-              <div style="font-size:12px;color:var(--text-secondary);display:flex;align-items:center;gap:6px;">
-                <span id="current-wib-time">00:00 WIB</span>
-              </div>
-            </div>
-            
-            <div class="market-sessions-list" style="display:flex; flex-direction:column; gap: 12px;">
-              <div class="market-session-item" id="session-sydney" style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--bg-primary); border-radius:8px; border:1px solid var(--border-color);">
-                <div>
-                  <div style="font-weight:600; font-size:14px; margin-bottom:4px;">🇦🇺 Sydney</div>
-                  <div style="font-size:12px; color:var(--text-secondary);">05:00 - 14:00 WIB</div>
-                </div>
-                <div class="session-status" style="font-size:12px; font-weight:600; padding:4px 8px; border-radius:4px; background:rgba(255,255,255,0.1); color:var(--text-secondary);">TUTUP</div>
-              </div>
-              
-              <div class="market-session-item" id="session-tokyo" style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--bg-primary); border-radius:8px; border:1px solid var(--border-color);">
-                <div>
-                  <div style="font-weight:600; font-size:14px; margin-bottom:4px;">🇯🇵 Tokyo</div>
-                  <div style="font-size:12px; color:var(--text-secondary);">06:00 - 15:00 WIB</div>
-                </div>
-                <div class="session-status" style="font-size:12px; font-weight:600; padding:4px 8px; border-radius:4px; background:rgba(255,255,255,0.1); color:var(--text-secondary);">TUTUP</div>
-              </div>
-              
-              <div class="market-session-item" id="session-london" style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--bg-primary); border-radius:8px; border:1px solid var(--border-color);">
-                <div>
-                  <div style="font-weight:600; font-size:14px; margin-bottom:4px;">🇬🇧 London</div>
-                  <div style="font-size:12px; color:var(--text-secondary);">14:00 - 23:00 WIB</div>
-                </div>
-                <div class="session-status" style="font-size:12px; font-weight:600; padding:4px 8px; border-radius:4px; background:rgba(255,255,255,0.1); color:var(--text-secondary);">TUTUP</div>
-              </div>
-              
-              <div class="market-session-item" id="session-ny" style="display:flex; justify-content:space-between; align-items:center; padding:12px; background:var(--bg-primary); border-radius:8px; border:1px solid var(--border-color);">
-                <div>
-                  <div style="font-weight:600; font-size:14px; margin-bottom:4px;">🇺🇸 New York</div>
-                  <div style="font-size:12px; color:var(--text-secondary);">19:00 - 04:00 WIB</div>
-                </div>
-                <div class="session-status" style="font-size:12px; font-weight:600; padding:4px 8px; border-radius:4px; background:rgba(255,255,255,0.1); color:var(--text-secondary);">TUTUP</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- COURSES STARTED DONUT -->
-          <div class="card donut-widget">
-            <h2 class="card-title" style="margin-bottom:0;">5 Fase Tersedia</h2>
-            <div class="donut-container">
-              <svg class="donut-svg" viewBox="0 0 36 36">
-                <path stroke="rgba(255,255,255,0.1)" stroke-width="4" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                <path stroke="var(--accent-green)" stroke-width="6" stroke-dasharray="25, 75" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                <path stroke="var(--accent-yellow)" stroke-width="6" stroke-dasharray="45, 55" stroke-dashoffset="-25" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                <path stroke="var(--accent-pink)" stroke-width="6" stroke-dasharray="15, 85" stroke-dashoffset="-70" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                <path stroke="var(--bg-card)" stroke-width="7" stroke-dasharray="2, 4" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-              </svg>
-            </div>
-            <div class="donut-stats">
-              <div class="d-stat green"><span class="d-stat-val">5</span> Completed</div>
-              <div class="d-stat yellow"><span class="d-stat-val">11</span> In Progress</div>
-              <div class="d-stat pink"><span class="d-stat-val">8</span> Stopped</div>
-            </div>
-          </div>
-
-        </div>
+      <div class="footer-contact">
+        <a href="https://t.me/arofxacademy" target="_blank"><i class="fa-brands fa-telegram"></i> @arofxacademy</a>
+        <a href="https://t.me/arofxchannel" target="_blank"><i class="fa-solid fa-bolt"></i> @arofxchannel</a>
+        <a href="https://api.whatsapp.com/send/?phone=6281252805815&text&type=phone_number&app_absent=0" target="_blank"><i class="fa-solid fa-headset"></i> Admin Contact</a>
       </div>
-
-      <!-- COURSES HUB VIEW -->
-      <div id="courses-hub-view" class="view-section" style="display:none;"></div>
-
-      <!-- CALENDAR VIEW -->
-      <div id="calendar-view" class="view-section" style="display:none;"></div>
-
-      <!-- ASSESSMENTS VIEW -->
-      <div id="assessments-view" class="view-section" style="display:none;"></div>
-
-      <!-- CERTIFICATES VIEW -->
-      <div id="certificates-view" class="view-section" style="display:none;"></div>
-
-      <!-- ACTIVITY VIEW -->
-      <div id="activity-view" class="view-section" style="display:none;"></div>
-
-      <!-- GLOSSARY VIEW -->
-      <div id="glossary-view" class="view-section" style="display:none;"></div>
-
-      <!-- BOOKMARKS VIEW -->
-      <div id="bookmarks-view" class="view-section" style="display:none;"></div>
-
-      <!-- CHAT VIEW -->
-      <div id="chat-view" class="view-section" style="display:none;"></div>
-
-      <!-- TASKS VIEW -->
-      <div id="tasks-view" class="view-section" style="display:none;"></div>
-      
     </div>
-  </main>
-</div>
-
-<!-- PROFILE SETTINGS MODAL -->
-<div id="profile-modal" class="quiz-modal" style="display:none;">
-  <div class="quiz-box" style="max-width: 400px; text-align: center;">
-    <h2>Pengaturan Profil</h2>
-    <div style="margin-bottom: 20px;">
-      <div id="profile-avatar-preview" class="user-avatar" style="width: 80px; height: 80px; font-size: 32px; margin: 0 auto 16px auto; cursor: default;">U</div>
-      <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 16px;">
-        <div class="avatar-color-btn" data-color="#14b8a6" style="width: 30px; height: 30px; border-radius: 50%; background-color: #14b8a6; cursor: pointer; border: 2px solid transparent;"></div>
-        <div class="avatar-color-btn" data-color="#f43f5e" style="width: 30px; height: 30px; border-radius: 50%; background-color: #f43f5e; cursor: pointer; border: 2px solid transparent;"></div>
-        <div class="avatar-color-btn" data-color="#3b82f6" style="width: 30px; height: 30px; border-radius: 50%; background-color: #3b82f6; cursor: pointer; border: 2px solid transparent;"></div>
-        <div class="avatar-color-btn" data-color="#eab308" style="width: 30px; height: 30px; border-radius: 50%; background-color: #eab308; cursor: pointer; border: 2px solid transparent;"></div>
-        <div class="avatar-color-btn" data-color="#8b5cf6" style="width: 30px; height: 30px; border-radius: 50%; background-color: #8b5cf6; cursor: pointer; border: 2px solid transparent;"></div>
+    
+    <div class="footer-bottom">
+      <div class="footer-disclaimer">
+        NOT FINANCIAL ADVICE // Trading Forex, Gold, dan Cryptocurrency mengandung risiko pasar yang tinggi. Seluruh riset, signal, dan materi edukasi di AroFX Academy ditujukan semata-mata untuk informasi edukatif dan riset kuantitatif.
       </div>
-      <input type="text" id="profile-name-input" placeholder="Masukkan Nama Anda" style="width: 100%; padding: 12px 16px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: var(--text-primary); font-size: 16px; text-align: center;" />
+      <div>
+        &copy; 2026 AroFX Academy. All Rights Reserved.
+      </div>
     </div>
-    <div class="quiz-nav" style="justify-content: center; gap: 16px;">
-      <button class="quiz-btn-secondary" id="btn-cancel-profile">Batal</button>
-      <button class="quiz-btn-primary" id="btn-save-profile">Simpan</button>
-    </div>
-  </div>
-</div>
+  </footer>
 
-<script src="materi.js"></script>
-<script src="app.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
